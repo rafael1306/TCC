@@ -4,10 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\AtividadeController;
 
-Route::get('/', [UsuarioController::class, 'loginView']);
+Route::get('/', [AtividadeController::class, 'atividadeView']);
 
-Route::get('/atividade',[AtividadeController::class, 'atividadeView']);
+Route::get('/login',[UsuarioController::class, 'loginView']);
 
-Route::get('/perfil', [UsuarioController::class, 'perfilView']);
+Route::get('/historico', [AtividadeController::class, 'historicoView']);
 
 Route::get('/criacao', [AtividadeController::class, 'criacaoView']);
+
+Route::get('/concluir', [AtividadeController::class, 'concluirView']);
+
+Route::get('/perfil', [UsuarioController::class, 'perfilView']);

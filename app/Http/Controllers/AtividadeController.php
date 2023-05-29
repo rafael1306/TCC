@@ -15,4 +15,14 @@ class AtividadeController extends Controller
     {
         return view('criacao');
     }
+    
+    public function historicoView()
+    {
+        return view('historico');
+    }
+
+    public function concluirView()
+    {
+        return view('concluir');
+    }
 }
