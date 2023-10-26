@@ -16,7 +16,7 @@
 
 <body>
     <header id="cabecalho" class="flex-row space-20 content-vcenter">
-        <img src="img/menu.svg" alt="" onclick="document.querySelector('#app-menu').classList.toggle('esconder')">
+        <img src="/img/menu.svg" alt="" onclick="document.querySelector('#app-menu').classList.toggle('esconder')">
         <span>TCC</span>
     </header>
     <nav id="app-menu" class="flex-col fit-width space-30 esconder">

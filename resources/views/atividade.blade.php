@@ -42,6 +42,7 @@
 
 
     <div class="flex-row content-center">
-        <a class="botao" href=""> adiciona atividade</a>
+        <a class="botao" href="/criacao"> adiciona atividade</a>
     </div>
+    
 </x-layout>
