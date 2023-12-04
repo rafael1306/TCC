@@ -9,3 +9,12 @@
 meter {
     width: 100%;
 }
+
+.box-task {
+    text-decoration: none;
+    color: #444;
+}
+
+.box-task:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}

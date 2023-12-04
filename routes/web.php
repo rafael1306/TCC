@@ -14,6 +14,8 @@ Route::get('/historico', [AtividadeController::class, 'historicoView']);
 Route::get('/criacao', [AtividadeController::class, 'criacaoView']);
 Route::post('/criacao', [AtividadeController::class, 'criacaoEnviar']);
 
+Route::get('/excluir/{id}', [AtividadeController::class, 'excluir']);
+
 Route::get('/concluir/{id}', [AtividadeController::class, 'concluirView']);
 Route::get('/salvar-conclusao/{id}', [AtividadeController::class, 'salvarConclusao']);
 

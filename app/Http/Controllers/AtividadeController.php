@@ -61,4 +61,12 @@ class AtividadeController extends Controller
         $atividade->save();
         return redirect('/');
     }
+
+    public function excluir(int $id)
+    {
+        $atividade = Atividade::find($id);
+        $atividade->delete($id);
+
+        return redirect('/');
+    }
 }

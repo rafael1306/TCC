@@ -39,7 +39,7 @@
     color: rgb(66, 4, 235);
 }
 
-.botao {
+.botao, .botao-alt {
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
@@ -49,6 +49,13 @@
     color: white;
     text-align: center;
     border: none;
+}
+
+.botao-alt {
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    color: black;
 }
 
 #app-frame {
@@ -61,4 +68,11 @@
     border: 5px solid black;
     border-radius: 15px;
     box-shadow: 0 0 36px 0px #00000087;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    padding: 15px;
+    border-radius: 15px;
 }
