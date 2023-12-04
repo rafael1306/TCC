@@ -10,42 +10,40 @@
     <link rel="stylesheet" href="/css/flex.css">
     <link rel="stylesheet" href="/css/flex-style.css">
     <link rel="stylesheet" href="/css/layout.css">
-
-
 </head>
 
 <body>
-    <header id="cabecalho" class="flex-row space-20 content-vcenter">
-        <img src="/img/menu.svg" alt="" onclick="document.querySelector('#app-menu').classList.toggle('esconder')">
-        <span>TCC</span>
-    </header>
-    <nav id="app-menu" class="flex-col fit-width space-30 esconder">
-        <a href="/" class="flex-roe gap-20 content-vcenter">
+    <div id="app-frame">
+        <header id="cabecalho" class="flex-row space-20 content-vcenter">
+            <img src="/img/menu.svg" alt="" onclick="document.querySelector('#app-menu').classList.toggle('esconder')">
+            <span>TCC</span>
+        </header>
+        <nav id="app-menu" class="flex-col fit-width space-30 esconder">
+            <a href="/" class="flex-roe gap-20 content-vcenter">
 
-            Atividades
+                Atividades
 
-        </a>
-        <a href="/concluir" class="flex-roe gap-20 content-vcenter">
+            </a>
+            <a href="/concluir" class="flex-roe gap-20 content-vcenter">
 
-            Concluida
+                Concluida
 
-        </a>
-        <a href="/historico" class="flex-roe gap-20 content-vcenter">
+            </a>
+            <a href="/historico" class="flex-roe gap-20 content-vcenter">
 
-            Histórico
+                Histórico
 
-        </a>
-        <a href="/perfil" class="flex-roe gap-20 content-vcenter">
+            </a>
+            <a href="/perfil" class="flex-roe gap-20 content-vcenter">
 
-            Perfil
+                Perfil
 
-        </a>
-    </nav>
-    <div id="conteudo" class="grow">
-        {{ $slot }}
+            </a>
+        </nav>
+        <div id="conteudo" class="grow">
+            {{ $slot }}
+        </div>
     </div>
-
-
 </body>
 
 </html>

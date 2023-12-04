@@ -1,14 +1,16 @@
 <x-layout>
     <link rel="stylesheet" href="/css/atividade.css">
     <div class="flex-col gap-10 padding-30">
-        <div class="texto-grande">Nome da atividade </div>
-        <div class="texto-grande">Descrição</div>
-        <div class="texto-pequeno">prazo:00/00/0000 00:00</div>
+        <div class="texto-grande">{{ $atividade->nome }}</div>
+        <div class="texto-grande">{{ $atividade->descricao }}</div>
+        @if($atividade->prazo)
+        <div class="texto-pequeno">Prazo: {{ $atividade->prazo }}</div>
+        @endif
+        <div class="texto-pequeno">XP a ganhar: {{ $atividade->nivel * 10 }}</div>
     </div>
     <div class="grow"></div>
     <div class="flex-col space-30">
-        <a class="botao" href="">concluir</a>
-        <a class="botao" href="">clonar</a>
-        <a class="botao" href="">excluir</a>
+        <a class="botao" href="/salvar-conclusao/{{ $atividade->id }}">Concluir</a>
+        <a class="botao" href="/excluir-conclusao/{{ $atividade->id }}">Excluir</a>
     </div>
 </x-layout>

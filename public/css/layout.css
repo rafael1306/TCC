@@ -38,6 +38,7 @@
 #app-menu a:hover {
     color: rgb(66, 4, 235);
 }
+
 .botao {
     padding: 10px 20px;
     border-radius: 20px;
@@ -47,4 +48,17 @@
     background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
+    border: none;
+}
+
+#app-frame {
+    margin: auto;
+    min-width: 400px;
+    min-height: 600px;
+    max-width: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+    border: 5px solid black;
+    border-radius: 15px;
+    box-shadow: 0 0 36px 0px #00000087;
 }

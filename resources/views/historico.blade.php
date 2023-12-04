@@ -22,7 +22,7 @@
         <div class="texto-pequeno">Expirada em 00/00/00 00:00</div>
     </div>
     <div class="grow"></div>
-    <div class="flex-row content-center">
+    <div class="flex-row content-center  space-30">
         <a class="botao" href="">Retornar</a>
     </div>
 </x-layout>

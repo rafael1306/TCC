@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Atividade;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,13 @@ class AtividadeController extends Controller
 {
     public function atividadeView()
     {
-        return view('atividade');
+        $usuario = Usuario::first();
+        $atividades = Atividade::where('status', 1)->get();
+
+        return view('atividade', [
+            'usuario' => $usuario,
+            'atividades' => $atividades,
+        ]);
     }
 
     public function criacaoView()
@@ -22,17 +29,36 @@ class AtividadeController extends Controller
         return view('historico');
     }
 
-    public function concluirView()
+    public function concluirView(int $id)
     {
-        return view('concluir');
+        $atividade = Atividade::find($id);
+
+        return view('concluir', [
+            'atividade' => $atividade,
+        ]);
     }
+
     public function criacaoEnviar(Request $form)
     {
-        $usuario = new Usuario();
-        $usuario->nome = $form->input('nome');
-        $usuario->descricao = $form->input('descricao');
-        $usuario->prazo = $form->input('prazo');
-        $usuario->save();
+        $atividade = new Atividade();
+        $atividade->nome = $form->input('nome');
+        $atividade->descricao = $form->input('descricao');
+        $atividade->prazo = $form->input('prazo');
+        $atividade->nivel = $form->input('nivel');
+        $atividade->save();
+        return redirect('/');
+    }
+
+    public function salvarConclusao(int $id)
+    {
+        $atividade = Atividade::find($id);
+        $usuario = Usuario::first();
+
+        $usuario->xp += $atividade->nivel * 10;
+        $usuario->save();        
+        
+        $atividade->status = 0;
+        $atividade->save();
         return redirect('/');
     }
 }
